@@ -6,27 +6,24 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open-Sans", sans-serif;
 }
 
+// NAVIGATION
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1000px;
 }
 
 .nav-items,
 .container {
-  display: flex;
   margin: 0 30px;
 }
 
 .nav-items a {
+  display: inline-block;
   padding: 1.5em 1.5em;
   text-decoration: none;
   color: #333;
@@ -42,4 +39,29 @@ body {
 .nav-items a:hover {
   background-color: #000;
   color: #fff;
+}
+
+// HEADER
+.header-img {
+  position: relative;
+  height: 260px;
+  background-image: url("/src/img/jungle_1920.jpg");
+  background-size: cover;
+  background-position: 0 50%;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 1;
+}
+
+.header-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
