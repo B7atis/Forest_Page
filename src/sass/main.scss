@@ -71,8 +71,8 @@ main {
   margin: 50px auto;
 }
 
-main h2 {
-  margin-bottom: 30px;
+h2 {
+  margin: 40px 0;
   text-transform: uppercase;
   text-align: center;
   font-weight: 300;
@@ -127,4 +127,51 @@ main h2 {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.offers p {
+  text-align: center;
+}
+
+.container-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-card {
+  margin: 40px 10px;
+  padding: 20px;
+  width: 220px;
+  height: 300px;
+  box-shadow: 0 0 5px rgb(134, 132, 132);
+  border-radius: 10px;
+}
+
+.text-offers p,
+h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.text-offers p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.text-offers h3 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.option {
+  list-style: none;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: center;
+}
+
+.option li {
+  margin: 5px 0;
 }
