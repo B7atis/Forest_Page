@@ -66,17 +66,17 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-// MAIN
+// ABOUT US
 main {
   margin: 50px auto;
 }
 
 h2 {
-  margin: 40px 0;
+  margin: 60px 0;
   text-transform: uppercase;
   text-align: center;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 45px;
 }
 
 .container-about-us {
@@ -129,50 +129,95 @@ h2 {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+// OFFERS
+
 .offers p {
   text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.all-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .container-price {
+  margin: 0 15px;
+  padding: 20px;
+  width: 350px;
+  height: 450px;
+  box-shadow: 0 0 5px rgb(134, 132, 132);
+  border-radius: 10px;
+}
+
+.offers-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.price-card {
-  margin: 60px 10px;
-  padding: 20px;
-  width: 220px;
-  height: 300px;
-  box-shadow: 0 0 5px rgb(134, 132, 132);
-  border-radius: 10px;
-}
-
-.text-offers p,
-h3 {
+.row .pricing-details {
+  margin: 20px 0;
   text-align: center;
-  margin: 10px 0;
+  padding-bottom: 15px;
 }
 
-.text-offers p {
-  font-size: 20px;
+.pricing-details h3 {
+  font-size: 30px;
   font-weight: 300;
 }
 
-.text-offers h3 {
-  margin-bottom: 15px;
-  font-size: 30px;
+.pricing-details p {
+  margin-top: 15px;
+  font-size: 50px;
+  font-weight: 500;
   font-family: "Raleway", sans-serif;
 }
 
-.option {
-  list-style: none;
+.row .features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 20px;
   font-weight: 200;
-  font-size: 15px;
-  text-align: left;
-  margin-left: 15px;
+  list-style: none;
 }
 
-.option li {
-  margin: 5px 0;
+.fa-check {
+  color: rgb(78, 192, 78);
+}
+
+.minus {
+  color: grey;
+}
+
+.features li span {
+  margin-left: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.container-price button {
+  height: 45px;
+  width: 200px;
+  margin-top: 40px;
+  border: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(134, 132, 132);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container-price button:hover {
+  background-color: rgb(78, 192, 78);
+  box-shadow: 0 0 5px rgb(78, 192, 78);
 }
