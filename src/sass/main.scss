@@ -47,7 +47,7 @@ body {
   height: 350px;
   background-image: url("/src/img/jungle_1920.jpg");
   background-size: cover;
-  background-position: 0 50%;
+  background-position: center;
 }
 
 .header-text {
@@ -220,4 +220,47 @@ h2 {
 .container-price button:hover {
   background-color: rgb(78, 192, 78);
   box-shadow: 0 0 5px rgb(78, 192, 78);
+}
+
+// FOOTER
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  margin-top: 140px;
+}
+
+.footer-logo {
+  padding: 60px 160px;
+  font-size: 60px;
+  color: #333;
+  font-weight: 300;
+  background-color: #fff;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: right;
+  width: 600px;
+}
+
+.footer-details p {
+  margin: 20px 30px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.footer-details ul,
+a {
+  margin: 20px 15px;
+  text-decoration: none;
+  list-style: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.footer-details ul li {
+  margin: 15px 0;
 }
