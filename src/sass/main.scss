@@ -223,7 +223,6 @@ h2 {
 }
 
 // FOOTER
-
 .footer-bg {
   background-color: rgba(141, 141, 141, 0.11);
 }
@@ -283,4 +282,102 @@ h2 {
   height: 100px;
   font-weight: 300;
   border-top: 1px solid #000;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    height: 80px;
+  }
+
+  .nav-items a {
+    display: none;
+  }
+
+  .logo a {
+    margin-left: 10px;
+  }
+
+  .header-img {
+    height: 300px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .header-text p {
+    font-size: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .about-us-box {
+    margin: 20px;
+  }
+
+  .container-about-us {
+    display: block;
+  }
+
+  .about-us-text {
+    text-align: justify;
+  }
+
+  .text p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .offers p {
+    font-size: 20px;
+    margin: 15px;
+  }
+
+  .all-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .container-price {
+    margin-top: 20px;
+    width: 280px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-size: 40px;
+  }
+
+  .footer-info {
+    display: block;
+    width: 100px;
+  }
+
+  .footer-details p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .footer-details ul,
+  .footer-details a {
+    margin: 0;
+  }
+
+  .watermark {
+    font-size: 12px;
+  }
 }
