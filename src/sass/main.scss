@@ -15,39 +15,50 @@ body {
   max-width: 1200px;
 }
 
-// NAVIGATION
+.header {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url("/src/img/jungle_1920.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-items a {
-  display: inline-block;
-  padding: 1.5em 1.5em;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
-}
-
 .logo a {
   text-decoration: none;
   color: #333;
-  font-size: 25px;
+  font-size: 35px;
 }
 
-.nav-items a:hover {
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+}
+
+.nav-links ul li a {
+  display: block;
+  padding: 30px;
+  color: #333;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.nav-links a:hover {
   background-color: #000;
   color: #fff;
-}
-
-// HEADER
-.header-img {
-  position: relative;
-  height: 350px;
-  background-image: url("/src/img/jungle_1920.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .header-text {
@@ -57,18 +68,6 @@ body {
   transform: translate(-50%, -50%);
   color: #fff;
   z-index: 1;
-}
-
-.header-bg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-// ABOUT US
-main {
-  margin: 50px auto;
 }
 
 h2 {
@@ -105,6 +104,7 @@ h2 {
 .img {
   position: relative;
   height: 280px;
+  width: 100%;
   background-image: url("/src/img/girl_1920.jpg");
   background-size: cover;
   background-position: 0 50%;
@@ -141,11 +141,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin-top: 60px;
 }
 
 .container-price {
-  margin: 0 15px;
+  margin: 0 auto;
   padding: 20px;
   width: 350px;
   height: 450px;
@@ -232,7 +233,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
   margin-top: 120px;
-  width: auto;
+  width: 100%;
   height: 300px;
 }
 
@@ -284,12 +285,13 @@ h2 {
   border-top: 1px solid #000;
 }
 
+// MEDIA
 @media (max-width: 767px) {
   .nav {
     height: 80px;
   }
 
-  .nav-items a {
+  .nav .nav-links a {
     display: none;
   }
 
@@ -318,7 +320,13 @@ h2 {
   }
 
   .about-us-box {
-    margin: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-us-box-img {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .container-about-us {
@@ -346,8 +354,26 @@ h2 {
   }
 
   .container-price {
-    margin-top: 20px;
-    width: 280px;
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    height: 50%;
+  }
+
+  .pricing-details h3 {
+    font-size: 20px;
+  }
+
+  .pricing-details p {
+    font-size: 40px;
+  }
+
+  .row .features li {
+    font-size: 17px;
+  }
+
+  .container-price button {
+    width: 100px;
   }
 
   .footer-container {
@@ -379,5 +405,179 @@ h2 {
 
   .watermark {
     font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    height: 60px;
+  }
+
+  .logo a {
+    font-size: 30px;
+    margin: 0 20px;
+  }
+
+  .nav .nav-links a {
+    font-size: 15px;
+  }
+
+  .header-text {
+    margin: 0 20px;
+  }
+
+  main h2 {
+    font-size: 30px;
+  }
+
+  .container-about-us {
+    margin: 50px;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .offers p {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .demo {
+    padding: 10px;
+    width: 25%;
+    height: 350px;
+  }
+
+  .demo h3 {
+    font-size: 20px;
+  }
+
+  .demo p {
+    font-size: 30px;
+    margin: 5;
+  }
+
+  .demo .row .features li {
+    font-size: 14px;
+  }
+
+  .demo button {
+    width: 80px;
+  }
+
+  .premium {
+    padding: 10px;
+    width: 25%;
+    height: 350px;
+  }
+
+  .premium h3 {
+    font-size: 20px;
+  }
+
+  .premium p {
+    font-size: 30px;
+    margin: 5;
+  }
+
+  .premium .row .features li {
+    font-size: 14px;
+  }
+
+  .premium button {
+    width: 80px;
+  }
+
+  .standard {
+    padding: 10px;
+    width: 35%;
+    height: 400px;
+  }
+
+  .standard h3 {
+    font-size: 30px;
+  }
+
+  .standard p {
+    font-size: 35px;
+    margin: 5;
+  }
+
+  .standard .row .features li {
+    font-size: 20px;
+  }
+
+  .standard button {
+    width: 120px;
+  }
+
+  .footer-info {
+    width: 0;
+  }
+  .footer-logo {
+    padding: 0;
+    margin-left: 20px;
+    font-size: 40px;
+  }
+
+  .footer-details {
+    font-size: 15px;
+  }
+
+  .footer-details p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo a {
+    font-size: 35px;
+  }
+
+  .nav .nav-links ul li a {
+    font-size: 22px;
+  }
+
+  .container-price {
+    margin: 0 auto;
+    padding: 20px;
+    width: 350px;
+    height: 450px;
+  }
+
+  .container-price button {
+    height: 45px;
+    width: 200px;
+    margin-top: 40px;
+  }
+
+  .pricing-details h3 {
+    font-size: 30px;
+  }
+
+  .pricing-details p {
+    font-size: 50px;
+  }
+
+  .demo .row .features li,
+  .premium .row .features li {
+    font-size: 20px;
+  }
+
+  .footer-logo {
+    font-size: 60px;
+  }
+
+  .footer-details p {
+    font-size: 25px;
+  }
+
+  main h2 {
+    font-size: 45px;
+  }
+
+  .container-about-us {
+    margin: 2em 0;
   }
 }
