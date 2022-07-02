@@ -88,35 +88,54 @@ nav ul li a.active {
   background-image: url("../img/jungle_1920.jpg");
   background-position: center;
   background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+  }
+
+  &-text {
+    position: absolute;
+    align-items: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+  }
+
+  &-text p {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &-text h1 {
+    font-weight: 600;
+  }
 }
 
-.background-main::before {
-  position: absolute;
-  top: 0;
-  left: 0;
+.background-main-offer {
+  position: relative;
+  height: 500px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  content: "";
-}
+  background-image: url("../img/adventure_1920.jpg");
+  background-position: center;
+  background-size: cover;
 
-.background-main-text {
-  position: absolute;
-  align-items: center;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  color: #fff;
-}
-
-.background-main-text p {
-  font-size: 20px;
-  margin: 0;
-}
-
-.background-main-text h1 {
-  font-weight: 600;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+  }
 }
 
 /* ABOUT US */
@@ -135,6 +154,7 @@ nav ul li a.active {
 .about-us-box-img {
   width: 100%;
 }
+
 .container-about-us {
   display: flex;
   flex-direction: row;
@@ -216,6 +236,20 @@ nav ul li a.active {
   text-transform: uppercase;
   text-align: center;
   font-weight: 300;
+}
+
+.custom-link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 2px solid rgb(78, 192, 78);
+  font-weight: 700;
+  z-index: 0;
+}
+
+.custom-link:hover {
+  color: rgb(78, 192, 78);
+  border-bottom: 2px solid #fff;
 }
 
 /* CARDS */
