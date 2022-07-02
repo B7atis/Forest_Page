@@ -1,87 +1,138 @@
-// RESET
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Open-Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .wrapper {
+  padding: 0 40px;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
 }
 
 .header {
-  position: relative;
-  height: 350px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
-    url("/src/img/jungle_1920.jpg");
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 80px;
+}
+
+nav .logo {
+  font-size: 33px;
+  color: #000;
+  font-weight: 300;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+nav ul li a {
+  color: #1b1b1b;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #000;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+
+/* BACKGROUND MAIN */
+.background-main {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url("../img/jungle_1920.jpg");
   background-position: center;
   background-size: cover;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo a {
-  text-decoration: none;
-  color: #333;
-  font-size: 35px;
-}
-
-.nav-links {
-  flex: 1;
-  text-align: right;
-}
-
-.nav-links ul li {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-}
-
-.nav-links ul li a {
-  display: block;
-  padding: 30px;
-  color: #333;
-  text-decoration: none;
-  font-size: 22px;
-}
-
-.nav-links a:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.header-text {
+.background-main::before {
   position: absolute;
-  top: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+}
+
+.background-main-text {
+  position: absolute;
+  align-items: center;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: left;
   color: #fff;
-  z-index: 1;
 }
 
-h2 {
-  margin: 60px 0;
+.background-main-text p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.background-main-text h1 {
+  font-weight: 600;
+}
+
+/* ABOUT US */
+.about-us-title {
+  margin: 60px auto;
   text-transform: uppercase;
   text-align: center;
   font-weight: 300;
-  font-size: 45px;
 }
 
+.about-us-title h2 {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.about-us-box-img {
+  width: 100%;
+}
 .container-about-us {
   display: flex;
   flex-direction: row;
-  margin: 2em 0;
 }
 
 .box-img {
@@ -90,10 +141,13 @@ h2 {
 }
 
 .about-us-box {
-  margin-left: 30px;
+  width: 100%;
+  margin-left: 60px;
 }
 
 .about-us-text h3 {
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 1em;
 }
 
@@ -101,57 +155,94 @@ h2 {
   line-height: 30px;
 }
 
+/* IMG FAMILY */
 .img {
   position: relative;
+  margin: 60px auto;
   height: 280px;
   width: 100%;
-  background-image: url("/src/img/girl_1920.jpg");
+  background-image: url("../img/girl_1920.jpg");
   background-size: cover;
-  background-position: 0 50%;
+  background-position: center;
+}
+
+.img::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
 }
 
 .text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px 100px;
-  font-size: 40px;
-  border: 1px solid #fff;
-  color: #fff;
-  z-index: 1;
-}
-
-.img-bg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-// OFFERS
-
-.offers p {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 300;
-}
-
-.all-cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 40%;
+  font-size: 35px;
+  font-weight: 600;
+  border: 1px solid #fff;
+  color: #fff;
+  z-index: 1;
+  letter-spacing: 1px;
 }
 
-.container-price {
-  margin: 0 auto;
-  padding: 20px;
-  width: 350px;
-  height: 450px;
-  box-shadow: 0 0 5px rgb(134, 132, 132);
-  border-radius: 10px;
+.text p {
+  text-align: center;
+  margin: 20px;
+}
+
+/* OFFER */
+.offer-title {
+  margin: 60px auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.offer-title h2 {
+  margin: 40px auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* CARDS */
+.offer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.offer-card {
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+  box-shadow: 0 1px 5px rgb(172, 171, 171);
+  border-radius: 5px;
+}
+
+.pricing-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0 auto;
+}
+
+.pricing-details h3 {
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.pricing-details p {
+  font-weight: 600;
+  font-size: 40px;
 }
 
 .offers-box {
@@ -160,51 +251,29 @@ h2 {
   align-items: center;
 }
 
-.row .pricing-details {
-  margin: 20px 0;
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.pricing-details h3 {
-  font-size: 30px;
-  font-weight: 300;
-}
-
-.pricing-details p {
-  margin-top: 15px;
-  font-size: 50px;
-  font-weight: 500;
-  font-family: "Raleway", sans-serif;
-}
-
-.row .features li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-weight: 200;
+.features {
+  padding: 0;
   list-style: none;
-}
-
-.fa-check {
-  color: rgb(78, 192, 78);
-}
-
-.minus {
-  color: grey;
 }
 
 .features li span {
   margin-left: 10px;
 }
 
-.btn {
+.check {
+  color: rgb(78, 192, 78);
+}
+
+.minus {
+  color: rgb(172, 171, 171);
+}
+
+.offer-btn {
   display: flex;
   justify-content: center;
 }
 
-.container-price button {
+.offer-btn button {
   height: 45px;
   width: 200px;
   margin-top: 40px;
@@ -213,371 +282,209 @@ h2 {
   font-size: 18px;
   font-weight: 300;
   background-color: #fff;
-  box-shadow: 0 0 5px rgb(134, 132, 132);
+  box-shadow: 0 1px 3px rgb(172, 171, 171);
   border-radius: 10px;
   cursor: pointer;
 }
 
-.container-price button:hover {
+.offer-btn button:hover {
   background-color: rgb(78, 192, 78);
   box-shadow: 0 0 5px rgb(78, 192, 78);
 }
 
-// FOOTER
-.footer-bg {
+/* FOOTER */
+.footer {
   background-color: rgba(141, 141, 141, 0.11);
+  margin-top: 50px;
 }
 
-.footer-container {
+.footer-box {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 120px;
-  width: 100%;
-  height: 300px;
+  height: 220px;
+  padding: 0;
 }
 
-.footer-logo {
-  margin: 0 auto;
-  padding-right: 280px;
-  font-size: 60px;
-  color: #333;
+.l-footer {
+  margin: 0 0 20px 30px;
+  font-size: 40px;
+}
+
+.l-footer span {
   font-weight: 300;
 }
 
-.footer-info {
+.r-footer {
   display: flex;
-  justify-content: right;
-  width: 600px;
-}
-
-.footer-details p {
-  margin: 20px 40px;
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.footer-details ul,
-.footer-details a {
-  margin: 20px 20px;
-  font-weight: 300;
-  text-decoration: none;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 10px;
   list-style: none;
-  color: #333;
-  cursor: pointer;
 }
 
-.footer-details a:hover {
-  color: rgb(78, 192, 78);
+.r-footer ul {
+  padding: 1px;
 }
 
-.footer-details ul li {
-  margin: 15px 0;
+.r-footer h2 {
+  margin: 0 25px 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.watermark {
+.box li {
+  margin: 3px 20px;
+  list-style: none;
+}
+
+.box a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.box a:hover {
+  color: rgb(13, 144, 6);
+}
+
+.b-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 60px;
   font-weight: 300;
-  border-top: 1px solid #000;
+  border-top: 1px solid rgba(156, 153, 153, 0.867);
 }
 
-// MEDIA
+.b-footer p {
+  margin: 0;
+  font-size: 12px;
+}
+
 @media (max-width: 767px) {
-  .nav {
-    height: 80px;
+  /* OFFER */
+  .offer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
-  .nav .nav-links a {
-    display: none;
-  }
-
-  .logo a {
-    margin-left: 10px;
-  }
-
-  .header-img {
+  /* FOOTER */
+  .footer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     height: 300px;
   }
 
-  .header-text {
+  .l-footer {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  .r-footer {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 940px) {
+  /* HAMBURGER */
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.5em 1em;
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* NAVIAGTION */
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    display: block;
     text-align: center;
+    transition: 0.5s;
   }
 
-  .header-text p {
+  nav ul.active {
+    left: 0;
+    padding: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    display: block;
     font-size: 20px;
+    color: #000;
+    padding: 0;
   }
 
-  .header-text h1 {
-    font-size: 25px;
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: none;
+    color: rgb(13, 144, 6);
   }
 
-  h2 {
-    font-size: 30px;
+  /* ABOUT US */
+  .container-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .about-us-box {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .about-us-box-img {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .container-about-us {
-    display: block;
-  }
-
-  .about-us-text {
+    padding: 20px 0;
+    margin-left: 0;
     text-align: justify;
   }
 
-  .text p {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .offers p {
-    font-size: 20px;
-    margin: 15px;
-  }
-
-  .all-cards {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .container-price {
-    display: block;
-    margin: 20px auto;
-    width: 60%;
-    height: 50%;
-  }
-
-  .pricing-details h3 {
-    font-size: 20px;
-  }
-
-  .pricing-details p {
-    font-size: 40px;
-  }
-
-  .row .features li {
-    font-size: 17px;
-  }
-
-  .container-price button {
-    width: 100px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    height: 500px;
-  }
-
-  .footer-logo {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    font-size: 40px;
-  }
-
-  .footer-info {
-    display: block;
-    width: 100px;
-  }
-
-  .footer-details p {
-    margin: 0;
-    font-size: 15px;
-  }
-
-  .footer-details ul,
-  .footer-details a {
-    margin: 0;
-  }
-
-  .watermark {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 768px) {
-  .nav {
-    height: 60px;
-  }
-
-  .logo a {
-    font-size: 30px;
-    margin: 0 20px;
-  }
-
-  .nav .nav-links a {
-    font-size: 15px;
-  }
-
-  .header-text {
-    margin: 0 20px;
-  }
-
-  main h2 {
-    font-size: 30px;
-  }
-
-  .container-about-us {
-    margin: 50px;
-  }
-
-  .text {
-    text-align: center;
-  }
-
-  .offers p {
-    font-size: 20px;
-    margin: 5px;
-  }
-
-  .demo {
-    padding: 10px;
-    width: 25%;
-    height: 350px;
-  }
-
-  .demo h3 {
-    font-size: 20px;
-  }
-
-  .demo p {
-    font-size: 30px;
-    margin: 5;
-  }
-
-  .demo .row .features li {
-    font-size: 14px;
-  }
-
-  .demo button {
-    width: 80px;
-  }
-
-  .premium {
-    padding: 10px;
-    width: 25%;
-    height: 350px;
-  }
-
-  .premium h3 {
-    font-size: 20px;
-  }
-
-  .premium p {
-    font-size: 30px;
-    margin: 5;
-  }
-
-  .premium .row .features li {
-    font-size: 14px;
-  }
-
-  .premium button {
-    width: 80px;
-  }
-
-  .standard {
-    padding: 10px;
-    width: 35%;
-    height: 400px;
-  }
-
-  .standard h3 {
-    font-size: 30px;
-  }
-
-  .standard p {
-    font-size: 35px;
-    margin: 5;
-  }
-
-  .standard .row .features li {
-    font-size: 20px;
-  }
-
-  .standard button {
-    width: 120px;
-  }
-
-  .footer-info {
-    width: 0;
-  }
-  .footer-logo {
-    padding: 0;
-    margin-left: 20px;
-    font-size: 40px;
-  }
-
-  .footer-details {
-    font-size: 15px;
-  }
-
-  .footer-details p {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) {
-  .logo a {
-    font-size: 35px;
-  }
-
-  .nav .nav-links ul li a {
-    font-size: 22px;
-  }
-
-  .container-price {
-    margin: 0 auto;
-    padding: 20px;
-    width: 350px;
-    height: 450px;
-  }
-
-  .container-price button {
-    height: 45px;
-    width: 200px;
-    margin-top: 40px;
-  }
-
-  .pricing-details h3 {
-    font-size: 30px;
-  }
-
-  .pricing-details p {
-    font-size: 50px;
-  }
-
-  .demo .row .features li,
-  .premium .row .features li {
-    font-size: 20px;
-  }
-
-  .footer-logo {
-    font-size: 60px;
-  }
-
-  .footer-details p {
+  .about-us-title h2 {
     font-size: 25px;
   }
-
-  main h2 {
-    font-size: 45px;
-  }
-
-  .container-about-us {
-    margin: 2em 0;
+  /* IMG FAMILY */
+  .text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 40%;
+    font-size: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
   }
 }
