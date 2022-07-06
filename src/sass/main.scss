@@ -138,6 +138,25 @@ nav ul li a.active {
   }
 }
 
+.background-main-contact {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url("../img/mailboxes_1920.jpg");
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+  }
+}
+
 /* ABOUT US */
 .about-us-title {
   margin: 60px auto;
@@ -436,6 +455,17 @@ nav ul li a.active {
   font-size: 1rem;
   padding: 1rem 0;
   line-height: 2;
+}
+
+// LOCATION & CONTACT US
+.location {
+  width: 80%;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.location iframe {
+  width: 100%;
 }
 
 @media (max-width: 767px) {
