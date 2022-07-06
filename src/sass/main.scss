@@ -41,7 +41,7 @@ nav {
 
 nav .logo {
   font-size: 33px;
-  color: #000;
+  color: #1b1b1b;
   font-weight: 300;
 }
 
@@ -401,6 +401,41 @@ nav ul li a.active {
 .b-footer p {
   margin: 0;
   font-size: 12px;
+}
+
+/* SERVICES */
+.services .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.box-services {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgb(172, 171, 171);
+  padding: 2rem;
+  text-align: center;
+}
+
+.box-services i {
+  color: rgb(13, 144, 6);
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.box-services h3 {
+  color: #222;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.box-services p {
+  color: #333;
+  font-size: 1rem;
+  padding: 1rem 0;
+  line-height: 2;
 }
 
 @media (max-width: 767px) {
