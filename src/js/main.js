@@ -1,8 +1,8 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-let section = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav ul a')
+const section = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav .nav-menu a')
 
 window.onscroll = () => {
   section.forEach(sec => {
@@ -14,7 +14,7 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach(links => {
         links.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+        document.querySelector('nav .nav-menu a[href*=' + id + ']').classList.add('active');
       })
     }
   })
