@@ -677,6 +677,7 @@ nav ul li a:hover {
   .about-us-title h2 {
     font-size: 25px;
   }
+
   /* IMG FAMILY */
   .text {
     position: absolute;
@@ -693,5 +694,11 @@ nav ul li a:hover {
     color: $white;
     z-index: 1;
     text-align: center;
+  }
+
+  // OFFER
+  .offer-btn button.active {
+    background-color: $green;
+    box-shadow: 0 0 5px $green;
   }
 }

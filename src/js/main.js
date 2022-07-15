@@ -1,8 +1,18 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-const section = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav .nav-menu a')
+const section = document.querySelectorAll('.scroll-spy');
+const navLinks = document.querySelectorAll('nav .nav-menu a');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+})
+
+document.querySelectorAll('.nav-link').forEach(e => e.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+}))
 
 window.onscroll = () => {
   section.forEach(sec => {
@@ -19,13 +29,3 @@ window.onscroll = () => {
     }
   })
 }
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-})
-
-document.querySelectorAll('.nav-link').forEach(e => e.addEventListener('click', () => {
-  hamburger.classList.remove('active');
-  navMenu.classList.remove('active');
-}))
