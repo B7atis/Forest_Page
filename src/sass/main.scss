@@ -43,10 +43,15 @@ nav {
   height: 80px;
 }
 
-nav .logo {
+nav .logo a {
   font-size: 33px;
-  color: $main-color;
   font-weight: 300;
+  text-decoration: none;
+  color: $main-color;
+}
+
+nav .logo a:hover {
+  color: $green-hover;
 }
 
 nav ul {
