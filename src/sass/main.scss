@@ -493,7 +493,7 @@ nav ul li a:hover {
 
   &-col {
     flex-basis: 48%;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
 
     & input,
     textarea {
@@ -545,6 +545,18 @@ nav ul li a:hover {
   color: $white;
   background-color: $green-hover;
 }
+@media (max-width: 540px) {
+  // CONTACT
+  .contact-us {
+    width: 100%;
+    padding: 0;
+  }
+
+  .location {
+    width: 90%;
+    padding: 0;
+  }
+}
 
 @media (max-width: 767px) {
   /* BACKGROUND MAIN */
@@ -573,6 +585,14 @@ nav ul li a:hover {
     flex-direction: column;
   }
 
+  .offer-title p {
+    margin: 0 5px;
+  }
+
+  .offer-card {
+    width: 240px;
+  }
+
   /* FOOTER */
   .footer-box {
     display: flex;
@@ -588,11 +608,19 @@ nav ul li a:hover {
   }
 
   .r-footer {
-    margin-top: 0;
+    margin: 4px;
+    padding: 0;
+  }
+
+  .r-footer h2 {
+    font-size: 14px;
   }
 
   // CONTACT
   .contact-us {
+    // width: 100%;
+    // padding: 0;
+
     &-row {
       flex-direction: column;
       box-shadow: none;
